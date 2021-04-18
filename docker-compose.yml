@@ -1,0 +1,11 @@
+version: '3.7'
+
+services: 
+  ftp-test:
+    image: fauria/vsftpd
+    environment: 
+      FTP_USER: samir
+      FTP_PASS: founou
+    volumes: 
+      - datas:/home/vsftpd
+      - datalogs/log/vsftpd:/var/log/vsftpd/
